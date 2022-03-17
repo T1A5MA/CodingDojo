@@ -8,9 +8,7 @@ def selection_sort(x):
                 minPos = j
                 minVal = x[j]
 
-        aux = x[i]
-        x[i] = x[minPos]
-        x[minPos] = aux
+        x[i], x[minPos] = x[minPos], x[i]
     return x
         
 
