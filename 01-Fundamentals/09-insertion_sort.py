@@ -1,16 +1,16 @@
-def selection_sort(x):
+def insertion_sort(x):
     for i in range(len(x)):
-        minVal = x[i]
-        minPos = i
-        for j in range(i, len(x)):
+        aux = x[i]
+        j = i-1
+        print("")
+        while j >= 0 and aux < x[j]:
+            x[j+1] = x[j]
+            j -= 1
+        x[j+1] = aux
+    return x        
 
-            if minVal > x[j]:
-                minPos = j
-                minVal = x[j]
+lista = [5, 3, 1, 7 ,4, 9, 6]
+print(insertion_sort(lista))
 
-        x[i], x[minPos] = x[minPos], x[i]
-    return x
-        
-
-lista = [5, 3, 1, 7 ,4, 6, 9]
-print(selection_sort(lista))
+lista = [5, 3, 1, 7 ,4, 6, 9, 2, 8]
+print(insertion_sort(lista))

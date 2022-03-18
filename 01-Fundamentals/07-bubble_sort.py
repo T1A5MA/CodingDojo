@@ -6,5 +6,5 @@ def bubble_sort(x):
                 x[i], x[i+1] = x[i+1], x[i]
     return x
 
-lista = [5, 3, 1, 7 ,4, 6, 9]
+lista = [5, 3, 1, 7 ,4, 9, 6]
 print(bubble_sort(lista))
